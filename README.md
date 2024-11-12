@@ -160,6 +160,6 @@ Competitive Leaderboard: If you’re part of a batch or study group, a leaderboa
 
 Daily Goals and Streaks: Use streaks and small goals to motivate daily practice, reinforcing incremental improvement and knowledge retention.
 
-Mock Interview Simulations: Integrate a feature where you complete random flashcards simulating an actual interview, creating a practical and immersive practice experience.
+### Mock Interview Simulations: Integrate a feature where you complete random flashcards simulating an actual interview, creating a practical and immersive practice experience.
 
 Expert Tips After Questions: After answering, show insights or “expert tips” related to each topic to deepen your understanding beyond just the answer.
