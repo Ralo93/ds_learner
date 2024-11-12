@@ -11,6 +11,10 @@ The Flashcard Application is a Python-based study aid designed to help users cre
 - **Progress Tracking**: Track your flashcards' review status to focus on areas that need improvement.
 - **Advanced Search**: Implement future upgrades like advanced search to enhance study focus.
 
+
+https://github.com/user-attachments/assets/a925e00d-3e25-4ab0-9298-e8eeecd0e43e
+
+
 ## Setup
 
 ### Prerequisites
