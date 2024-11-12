@@ -142,6 +142,24 @@ Motivation prompts based on the user’s achievements, study streaks, or goals.
 Smart reminders for spaced repetition, tailored to the user’s learning style.
 Benefit: Users can stay motivated with a clear picture of their progress and a tailored path to reach their learning goals, resulting in improved engagement and faster mastery.
 
-## Contributing
+# Feature Enhancements
+Interview-Focused Categories: Curate flashcards specifically for common data science interview topics, such as machine learning theory, SQL, Python, and problem-solving approaches.
 
-Feel free to open issues or submit pull requests to improve the application.
+Difficulty-Based Progression: Since your goal is to master all levels, ensure the app dynamically adjusts question difficulty based on your progress, helping you to continually improve.
+
+Real-World Scenario Questions: Add flashcards that mimic real interview scenarios and case studies, where you have to think through practical applications of data science skills.
+
+Self-Assessment with Feedback: Include a feature where you rate your confidence or accuracy after each session. Based on your responses, the app could suggest areas for improvement.
+
+Timed Practice Sessions: Since interview scenarios often test quick thinking, implement a timer to practice under time constraints. This will prepare you for rapid problem-solving in actual interviews.
+
+# Incentives for Continued Use
+Achievement Badges and Progress Metrics: Track your mastery in each category and give visual feedback on progress to motivate continued use.
+
+Competitive Leaderboard: If you’re part of a batch or study group, a leaderboard could add friendly competition, encouraging regular usage and improvement.
+
+Daily Goals and Streaks: Use streaks and small goals to motivate daily practice, reinforcing incremental improvement and knowledge retention.
+
+Mock Interview Simulations: Integrate a feature where you complete random flashcards simulating an actual interview, creating a practical and immersive practice experience.
+
+Expert Tips After Questions: After answering, show insights or “expert tips” related to each topic to deepen your understanding beyond just the answer.
