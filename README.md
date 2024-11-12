@@ -110,7 +110,7 @@ flashcard-app/
 
 ## Future Enhancements
 
-- **Advanced Video Search**: Search frames or indexes in a video by object recognition.
+- **Advanced Topic Progression**: Create new questions from different perspectives resulting in a broader understanding.
 - **Flashcard Stats**: Generate insights on the study session, including time spent and accuracy.
 - **Customizable Categories**: Add, modify, and delete categories for better flashcard organization.
 
