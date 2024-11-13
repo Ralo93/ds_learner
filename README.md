@@ -104,8 +104,6 @@ flashcard-app/
 ├── requirements.txt          # Dependencies list
 └── src/
     ├── app.py                # Main application script
-    ├── functional/
-    │   └── advanced_search.py # Planned module for advanced video search
     ├── models/
     │   └── flashcard.py       # Flashcard model definition
     └── utils/
