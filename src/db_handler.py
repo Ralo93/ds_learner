@@ -54,6 +54,15 @@ class DatabaseHandler:
         self.cursor.execute("SELECT category, status, COUNT(*) FROM flashcards GROUP BY category, status")
         return self.cursor.fetchall()
     
+    def get_flashcard_summary_with_diff(self):
+        self.cursor.execute("""
+            SELECT category, status, difficulty, COUNT(*) as count 
+            FROM flashcards 
+            GROUP BY category, status, difficulty
+            ORDER BY category, difficulty
+        """)
+        return self.cursor.fetchall()
+    
     def get_flashcards_by_category(self, category: str, status: Optional[str] = None) -> List[Tuple]:
         """
         Retrieve flashcards by category, optionally filtered by status.
@@ -132,7 +141,6 @@ class DatabaseHandler:
         query = "UPDATE flashcards SET status = ? WHERE id = ?"
         self.cursor.execute(query, (status, flashcard_id))
         self.conn.commit()
-
 
     def delete_flashcard(self, flashcard_id):
         try:

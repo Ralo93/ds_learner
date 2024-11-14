@@ -10,6 +10,9 @@ with open("config.json", "r") as file:
 # Access the API key
 openai_api_key = config["openai"]["api_key"]
 
+# Set it as an environment variable
+os.environ["OPENAI_API_KEY"] = openai_api_key
+
 class FlashcardGenerator:
     def __init__(self, db_name=None):
         self.db_handler = DatabaseHandler(db_name)
@@ -50,8 +53,11 @@ class FlashcardGenerator:
                         {
                             "role": "system",
                             "content": (
+                                "You provide excellent short summaries about data science and machine learning topics and convert them into question-answering pairs. You shine in communicating complex topics in different levels of abstraction, from high (basic) to"
+                                "very detailed (advanced). Try to add mathematical examples and expressions where applicable to further enhance understanding of the concepts by trying to answer your questions."
+                                "Take your time to think if your answer is factually correct, and add sources at the end of your response."
                                 "Ensure the question is both unique and detailed. Avoid overly broad questions. If math is involved, you can add examples in the question and add the answer in the answer section."
-                                "For example, instead of asking 'What is overfitting?', ask "
+                                "For example, instead of asking 'What is overfitting?', ask: "
                                 "'How does adding dropout layers mitigate overfitting in neural networks, and what is the trade-off?'"
                             )
                         }
@@ -132,6 +138,7 @@ class FlashcardGenerator:
             pass
 
     def generate_flashcard_from_question(self, question, category, difficulty):
+        
         """
         Generate a flashcard based on a predefined question and use OpenAI to get an answer.
         
@@ -228,11 +235,11 @@ if __name__ == "__main__":
     generator = FlashcardGenerator()
     
     # Define topic and difficulty
-    category = "Backpropagation"
-    difficulty = "advanced"
+    category = "Databases"
+    difficulty = "basic"
     
     # Generate flashcards for the specified topic and difficulty
-    generator.generate_flashcards(category, difficulty, num_flashcards=3)
+    generator.generate_flashcards(category, difficulty, num_flashcards=20)
     
     # Close the database connection
     generator.close()

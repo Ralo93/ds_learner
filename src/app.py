@@ -7,6 +7,7 @@ from flashcard import *
 import plotly.express as px
 import pandas as pd
 from fill_cards import *
+import requests
 
 # Initialize database
 #db_handler = DatabaseHandler()
@@ -18,7 +19,7 @@ st.set_page_config(layout="wide")
 st.title("Data Science Learning App")
 
 # Tab layout
-tab1, tab2, tab3, tab4 = st.tabs(["Practice Flashcards", "Create/Update Flashcards", "Visualize Flashcards", "DB Browser"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Practice Flashcards", "Create/Update Flashcards", "Visualize Flashcards", "DB Browser", "Similarity Viz"])
 
 categories = [
     "General", "Linear Algebra for Machine Learning", "Bash & Git", "SQL", "Probability & Statistics", "Data Science Fundamentals", 
@@ -27,9 +28,6 @@ categories = [
     "Transfer Learning", "LLM Optimization", "Fine Tuning LLMs", "Debugging Deep Learning", 
     "Vision Transformers", "CV Projects", "Soft Skills"
 ]
-
-#HOW TO KEEP UP TO DATE
-
 
 
 with tab2:
@@ -240,39 +238,243 @@ with tab1:
 
 
 
+
 with tab3:
     st.header("Flashcard Summary")
-    summary = filler.db_handler.get_flashcard_summary()
+    
+    summary = filler.db_handler.get_flashcard_summary_with_diff()
+
+    print(summary)
     
     if summary:
-        # Convert summary data to DataFrame for plotting
-        summary_df = pd.DataFrame(summary, columns=['Category', 'Status', 'Count'])
+        summary_df = pd.DataFrame(summary, columns=['Category', 'Status', 'Difficulty', 'Count'])
         
-        # Create a bar plot using Plotly Express
-        fig = px.bar(
-            summary_df, 
-            x='Category', 
-            y='Count', 
-            color='Status', 
-            barmode='group',
-            title="Flashcard Status by Category",
-            labels={'Count': 'Number of Flashcards', 'Category': 'Flashcard Category'},
-            text='Count'
+        # Modern blue color palette
+        difficulty_colors = {
+            'basic': '#93C5FD',    # Light blue
+            'intermediate': '#3B82F6',  # Medium blue
+            'advanced': '#1E40AF'     # Dark blue
+        }
+        
+        status_colors = {
+            'unknown': '#BFDBFE',      # Very light blue
+            'Learning': '#60A5FA',  # Sky blue
+            'known': '#2563EB'   # Royal blue
+        }
+        
+        # 1. Difficulty Distribution
+        st.subheader("Questions by Difficulty")
+        diff_fig = px.bar(
+            summary_df.groupby(['Category', 'Difficulty'])['Count'].sum().reset_index(),
+            x='Category',
+            y='Count',
+            color='Difficulty',
+            title=" ",
+            labels={
+                'Count': 'Number of Questions',
+                'Category': 'Question Category',
+                'Difficulty': 'Difficulty Level'
+            },
+            text='Count',
+            #barmode='stack',
+            color_discrete_map=difficulty_colors
         )
         
-        # Customize layout for modern look
-        fig.update_layout(
+        diff_fig.update_layout(
             xaxis_title="Category",
-            yaxis_title="Number of Flashcards",
-            legend_title="Flashcard Status",
+            yaxis_title="Number of Questions",
+            legend_title="Difficulty Level",
             template="plotly_white",
-            title_x=0.7
+            title_x=0.5,
+            bargap=0.2,
+            showlegend=True,
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="right",
+                x=0.99
+            ),
+            plot_bgcolor='white',
+            paper_bgcolor='white'
         )
         
-        # Display the plot in Streamlit
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.write("No flashcards available for visualization.")
+        diff_fig.update_traces(
+            textposition='auto',
+            texttemplate='%{text}',
+            textfont_size=12,
+            textfont_color='white'  # Make text white for better contrast
+        )
+        
+        st.plotly_chart(diff_fig, use_container_width=True)
+        
+        # 2. Status Distribution
+        st.subheader("Questions by Status")
+        status_fig = px.bar(
+            summary_df.groupby(['Category', 'Status'])['Count'].sum().reset_index(),
+            x='Category',
+            y='Count',
+            color='Status',
+            title=" ",
+            labels={
+                'Count': 'Number of Questions',
+                'Category': 'Question Category',
+                'Status': 'Question Status'
+            },
+            text='Count',
+            #barmode='stack',
+            color_discrete_map=status_colors
+        )
+        
+        status_fig.update_layout(
+            xaxis_title="Category",
+            yaxis_title="Number of Questions",
+            legend_title="Question Status",
+            template="plotly_white",
+            title_x=0.5,
+            bargap=0.2,
+            showlegend=True,
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="right",
+                x=0.99
+            ),
+            plot_bgcolor='white',
+            paper_bgcolor='white'
+        )
+        
+        status_fig.update_traces(
+            textposition='auto',
+            texttemplate='%{text}',
+            textfont_size=12,
+            textfont_color='white'  # Make text white for better contrast
+        )
+        
+        st.plotly_chart(status_fig, use_container_width=True)
+        
+    # Summary statistics with horizontal bar plots
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("""
+            <div style="color: #1E40AF; font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
+                Difficulty Distribution
+            </div>
+        """, unsafe_allow_html=True)
+        
+        difficulty_breakdown = summary_df.groupby('Difficulty')['Count'].sum()
+        total_questions = difficulty_breakdown.sum()
+        
+        # Create DataFrame for difficulty plot
+        diff_stats = pd.DataFrame({
+            'Difficulty': difficulty_breakdown.index,
+            'Count': difficulty_breakdown.values,
+            'Percentage': (difficulty_breakdown.values / total_questions * 100).round(1)
+        })
+        
+        # Sort by count descending
+        diff_stats = diff_stats.sort_values('Count', ascending=True)
+        
+        # Create horizontal bar plot for difficulty
+        diff_fig = px.bar(
+            diff_stats,
+            y='Difficulty',
+            x='Percentage',
+            orientation='h',
+            text=diff_stats.apply(lambda x: f"{int(x['Count'])} ({x['Percentage']}%)", axis=1),
+            color='Difficulty',
+            color_discrete_map={
+                'basic': '#93C5FD',    # Light blue
+                'intermediate': '#3B82F6',  # Medium blue
+                'advanced': '#1E40AF'     # Dark blue
+            }
+        )
+        
+        diff_fig.update_layout(
+            showlegend=False,
+            xaxis_title="Percentage of Questions",
+            yaxis_title="",
+            margin=dict(l=0, r=0, t=0, b=0),
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            xaxis=dict(
+                showgrid=True,
+                gridwidth=1,
+                gridcolor='#E5E7EB',
+                range=[0, 100]
+            ),
+            height=200
+        )
+        
+        diff_fig.update_traces(
+            textposition='auto',
+            textfont_size=12,
+            textfont_color='white'
+        )
+        
+        st.plotly_chart(diff_fig, use_container_width=True)
+
+    with col2:
+        st.markdown("""
+            <div style="color: #1E40AF; font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
+                Status Distribution
+            </div>
+        """, unsafe_allow_html=True)
+        
+        status_breakdown = summary_df.groupby('Status')['Count'].sum()
+        
+        # Create DataFrame for status plot
+        status_stats = pd.DataFrame({
+            'Status': status_breakdown.index,
+            'Count': status_breakdown.values,
+            'Percentage': (status_breakdown.values / total_questions * 100).round(1)
+        })
+        
+        # Sort by count descending
+        status_stats = status_stats.sort_values('Count', ascending=True)
+        
+        # Create horizontal bar plot for status
+        status_fig = px.bar(
+            status_stats,
+            y='Status',
+            x='Percentage',
+            orientation='h',
+            text=status_stats.apply(lambda x: f"{int(x['Count'])} ({x['Percentage']}%)", axis=1),
+            color='Status',
+            color_discrete_map={
+                'unknown': '#BFDBFE',      # Very light blue
+                'Learning': '#60A5FA',  # Sky blue
+                'known': '#2563EB'   # Royal blue
+            }
+        )
+        
+        status_fig.update_layout(
+            #barmode='stack',
+            showlegend=False,
+            xaxis_title="Percentage of Questions",
+            yaxis_title="",
+            margin=dict(l=0, r=0, t=0, b=0),
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            xaxis=dict(
+                showgrid=True,
+                gridwidth=1,
+                gridcolor='#E5E7EB',
+                range=[0, 100]
+            ),
+            height=200
+        )
+        
+        status_fig.update_traces(
+            textposition='inside',
+            textfont_size=12,
+            textfont_color='white'
+        )
+        
+        st.plotly_chart(status_fig, use_container_width=True)
+        
+
+
 
 
 with tab4:
