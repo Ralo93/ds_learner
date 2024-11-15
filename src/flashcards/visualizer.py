@@ -26,6 +26,7 @@ def load_all_embeddings(directory):
             with open(os.path.join(directory, file), "rb") as f:
                 embeddings = pickle.load(f)
                 embeddings_dict.update(embeddings)
+
                 # Assign a unique group for nodes in this file
                 for node_id in embeddings.keys():
                     file_groups[node_id] = group_id
@@ -35,6 +36,8 @@ def load_all_embeddings(directory):
 # Function to create a NetworkX graph from embeddings with similarity-based edges
 def create_graph(embeddings_dict, file_groups, similarity_threshold):
     G = nx.Graph()
+
+    #TODO Add one keyword into the embeddings_dict and the category from the file_name
 
     # Add nodes to the graph with file-based colors
     for node_id, embedding in embeddings_dict.items():
@@ -61,8 +64,6 @@ def visualize_graph(G, min_size=15, max_size=50):
     min_rank = min(pagerank_scores.values())
     max_rank = max(pagerank_scores.values())
 
-
-
     def normalize(rank):
         """Normalize rank score to a size within [min_size, max_size]."""
         return min_size + (rank - min_rank) / (max_rank - min_rank) * (max_size - min_size)
@@ -71,10 +72,15 @@ def visualize_graph(G, min_size=15, max_size=50):
     net = Network(height="400px", width="100%", bgcolor="white", font_color="black")
     net.show_buttons(filter_=['physics'])  # Enable physics for interactive experience
 
+    # Define colors for each group (category)
+    group_colors = {1: "red", 2: "blue", 3: "green", 4: "purple", 5: "orange"}  # Extend as needed
+
     # Add nodes with sizes based on normalized PageRank scores
     for node, rank in pagerank_scores.items():
         size = normalize(rank)  # Apply normalization
-        net.add_node(node, title=str(node), size=size, group=G.nodes[node]["group"])
+        group = G.nodes[node]["group"]
+        color = group_colors.get(group, "gray")  # Default color if group is not defined
+        net.add_node(node, title=str(node), size=size, group=group, color=color)
 
     # Add edges
     for source, target, data in G.edges(data=True):
@@ -83,7 +89,18 @@ def visualize_graph(G, min_size=15, max_size=50):
     # Save the generated HTML file to display in Streamlit
     path = "graph.html"
     net.save_graph(path)
-    return path
+    return path, group_colors
+
+# Function to display a legend in Streamlit
+def display_legend(group_colors):
+    legend_html = "<div style='display: flex; flex-wrap: wrap; gap: 10px;'>"
+    for group, color in group_colors.items():
+        legend_html += f"<div style='display: flex; align-items: center;'>"
+        legend_html += f"<div style='width: 20px; height: 20px; background-color: {color}; border-radius: 50%; margin-right: 5px;'></div>"
+        legend_html += f"<span>Category {group}</span>"
+        legend_html += "</div>"
+    legend_html += "</div>"
+    st.markdown(legend_html, unsafe_allow_html=True)
 
 # Streamlit app
 st.title("Embedding Visualization with Cosine Similarity Threshold and PageRank")
@@ -94,14 +111,22 @@ similarity_threshold = st.sidebar.slider("Cosine Similarity Threshold", min_valu
 
 # Load and visualize embeddings
 if os.path.exists(EMBEDDINGS_DIR):
+
+
     embeddings, file_groups = load_all_embeddings(EMBEDDINGS_DIR)
+    #print(file_groups)
     st.write("Embeddings loaded successfully.")
 
     # Create graph based on the similarity threshold
     graph = create_graph(embeddings, file_groups, similarity_threshold)
-    graph_path = visualize_graph(graph, min_size=15, max_size=50)
+    graph_path, group_colors = visualize_graph(graph, min_size=15, max_size=50)
     
     # Display graph in Streamlit
-    st.components.v1.html(open(graph_path, 'r').read(), height=1000, scrolling=True)
+    st.components.v1.html(open(graph_path, 'r').read(), height=700, scrolling=True)
+    
+    # Display legend
+    st.write("### Legend")
+    display_legend(group_colors)
+
 else:
     st.error("Embeddings directory not found. Please ensure `.pkl` files are located in the specified directory.")

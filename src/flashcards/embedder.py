@@ -3,7 +3,7 @@ import pickle
 import os
 import openai
 from typing import List, Tuple, Optional
-from db_handler import *
+from src.flashcards.db_handler import *
 
 from langchain_openai import OpenAIEmbeddings
 
@@ -23,7 +23,7 @@ embeddings = OpenAIEmbeddings()
 
 # Define Embedder class
 class Embedder:
-    def __init__(self, model_engine: str = "text-embedding-ada-002", save_path: str = "../data/"):
+    def __init__(self, model_engine: str = "text-embedding-ada-002", save_path: str = "data/"):
         self.model_engine = model_engine
         self.save_path = save_path
         os.makedirs(save_path, exist_ok=True)
@@ -61,10 +61,10 @@ def main():
     db = DatabaseHandler()
 
     # Initialize Embedder
-    embedder = Embedder(save_path="./data/")
+    embedder = Embedder(save_path="data/")
 
     # Define the category and optional status filter
-    category = "Databases"
+    category = "Deep Learning"
     status = "unknown"  # Change to None if you want all statuses
 
     # Retrieve flashcards by category and status

@@ -27,6 +27,7 @@ class DatabaseHandler:
         """)
         self.conn.commit()
 
+
     def add_flashcard(self, question: str, answer: str, category: str, difficulty: str):
         cursor = self.conn.cursor()
         cursor.execute("""

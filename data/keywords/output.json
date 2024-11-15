@@ -1,0 +1,386 @@
+[
+    {
+        "Keyword": "University of Toronto",
+        "Explanation": "The keyword \"University of Toronto\" in this context indicates the affiliation of the author of the scientific paper, suggesting that they are affiliated with the University of Toronto. This means that the author is likely a researcher or academic associated with the institution."
+    },
+    {
+        "Keyword": "Google Brain",
+        "Explanation": "Google Brain is a research team at Google that focuses on artificial intelligence and machine learning. They are involved in developing new algorithms and technologies to improve various aspects of AI, such as natural language processing and image recognition. The team is made up of researchers and engineers who work on cutting-edge projects to advance the field of AI."
+    },
+    {
+        "Keyword": "Illia Polosukhin\u00e2\u02c6\u2014",
+        "Explanation": "Illia Polosukhin\u00e2\u02c6\u2014 is likely a researcher or author who has contributed to the scientific paper. The symbol \u00e2\u02c6\u2014 indicates that they are the lead author of the paper, and the symbol \u00e2\u20ac\u00a1 may indicate their affiliation or contribution level within the research team."
+    },
+    {
+        "Keyword": "3.5 days",
+        "Explanation": "In the context of the scientific paper, the keyword '3.5 days' likely refers to a specific amount of time used in an experiment or observation. This period of 3.5 days may represent the duration of a particular study, the time it took for a certain process to occur, or the interval between two events. This specific timeframe is important for understanding the results and conclusions of the research presented in the paper."
+    },
+    {
+        "Keyword": "Google Brain",
+        "Explanation": "Google Brain is a research team at Google that focuses on developing and advancing artificial intelligence and machine learning technologies. The team is involved in various research projects related to improving AI algorithms and applications."
+    },
+    {
+        "Keyword": "Google Research",
+        "Explanation": "'Google Research' refers to a research division within Google that focuses on conducting scientific studies and experiments to advance technology and innovation. Researchers at Google Research work on various projects to solve complex problems and improve existing products and services. The individuals listed in the context are affiliated with Google Research and likely involved in research and development activities within the organization."
+    },
+    {
+        "Keyword": "Conference on Neural Information Processing Systems",
+        "Explanation": "The Conference on Neural Information Processing Systems (NIPS) is an annual academic conference focused on the field of machine learning and artificial intelligence. The 31st edition of the conference was held in Long Beach, California, USA in 2017. Researchers and experts from around the world gather at NIPS to present and discuss the latest advancements in neural information processing systems."
+    },
+    {
+        "Keyword": "Long Beach",
+        "Explanation": "In this context, 'Long Beach' refers to the location where the 31st Conference on Neural Information Processing Systems (NIPS 2017) took place. This conference was held in Long Beach, California, USA."
+    },
+    {
+        "Keyword": "as little as twelve hours",
+        "Explanation": "The phrase \"as little as twelve hours\" in this context means that the Transformer model can achieve a high level of translation quality after being trained for a minimum of twelve hours using eight P100 GPUs. This indicates that the model can learn and improve quickly within a relatively short period of time."
+    },
+    {
+        "Keyword": "eight P100",
+        "Explanation": "The keyword 'eight P100' refers to the use of eight Nvidia P100 graphics processing units (GPUs) to train a model, specifically the Transformer model mentioned in the scientific paper. This parallelization allows for faster training and can achieve state-of-the-art translation quality in as little as twelve hours."
+    },
+    {
+        "Keyword": "Multi-Head Attention",
+        "Explanation": "Multi-Head Attention is a mechanism used in the Transformer model to improve the effective resolution of attention-weighted positions. It consists of several attention layers running in parallel, allowing the model to capture different aspects of the input sequence simultaneously. This helps to maintain a higher level of detail and accuracy in the attention mechanism despite the averaging of attention weights."
+    },
+    {
+        "Keyword": "Sublayer( x)is",
+        "Explanation": "In this context, the keyword 'Sublayer( x)is' refers to a function that is implemented by a sub-layer within a neural network. This function takes an input 'x' and performs some operation on it to produce an output. The output of this sub-layer is then added to the original input 'x' and passed through a normalization process called LayerNorm. The overall output of the sub-layer is the result of this operation."
+    },
+    {
+        "Keyword": "Dot-Product Attention",
+        "Explanation": "Dot-Product Attention is a mechanism used in neural networks for processing sequences of data. In this context, Scaled Dot-Product Attention refers to a specific type of attention mechanism that calculates the similarity between two sequences of data by taking the dot product of their vectors and scaling the result. This mechanism is often used in conjunction with multi-head attention, where the attention operation is performed multiple times in parallel to capture different aspects of the input data. Overall, Scaled Dot-Product Attention helps the model focus on relevant information in the input sequences and produce a weighted sum as the output."
+    },
+    {
+        "Keyword": "Scaled Dot-Product Attention",
+        "Explanation": "Scaled Dot-Product Attention is a type of attention mechanism used in neural networks for processing sequences of data. It involves computing the dot product of a query vector and a set of key vectors, then scaling the result by the square root of the dimension of the key vectors. This helps to stabilize the gradients during the training process. The output of this attention mechanism is a weighted sum of the values, which are the vectors being attended to. This attention mechanism is often used in conjunction with multi-head attention, where multiple sets of query, key, and value vectors are used in parallel to capture different aspects of the input data."
+    },
+    {
+        "Keyword": "Scaled Dot-Product Attention",
+        "Explanation": "Scaled Dot-Product Attention is a type of attention mechanism used in neural networks for processing sequential data. It involves calculating the dot product of the query and key vectors, dividing the result by the square root of the dimension of the key vectors, and applying a softmax function to obtain a set of weights. These weights are then used to compute a weighted sum of the value vectors, which represents the output of the attention mechanism. This technique helps the model focus on relevant parts of the input sequence during processing."
+    },
+    {
+        "Keyword": "3.2.2 Multi-Head Attention",
+        "Explanation": "In the context of a scientific paper, '3.2.2 Multi-Head Attention Instead' refers to a specific technique used in the field of natural language processing and machine learning. Multi-Head Attention is a mechanism that allows a model to focus on different parts of the input sequence simultaneously, improving its ability to capture complex relationships within the data. The 'Instead' part suggests that the paper is proposing an alternative or modification to the traditional Multi-Head Attention method. This section likely elaborates on how the proposed approach differs from the standard technique and the potential benefits it offers."
+    },
+    {
+        "Keyword": "variance dk",
+        "Explanation": "In the context of the scientific paper, the term 'variance dk' refers to the variability or spread of the values in a set of data represented by the vector k. The variance dk represents how much the values in the vector k differ from their mean value. In this case, the dot product of vectors q and k has a mean of 0 and a variance of dk, indicating the variability of the values in vector k."
+    },
+    {
+        "Keyword": "head h)WO",
+        "Explanation": "In this context, 'head h)WO' represents a specific attention head in a neural network model. The attention mechanism allows the model to focus on different parts of the input data when making predictions. The notation 'head h' indicates which particular attention head is being referred to. The parameter matrix WO is used to compute the output of this attention head, with dimensions specified as hdv x dmodel. This matrix helps to transform the input data into a format that can be used by the model to make accurate predictions."
+    },
+    {
+        "Keyword": "/h= 64",
+        "Explanation": "In this context, the keyword '/h= 64' is indicating the value of the parameter 'h', which is equal to 64. The parameter 'h' is being used in the equations or calculations related to the model being discussed in the scientific paper. The value of 64 for 'h' is specified to ensure consistency and accuracy in the analysis or modeling process."
+    },
+    {
+        "Keyword": "Feed-Forward Networks",
+        "Explanation": "Feed-Forward Networks in the context of this scientific paper refer to fully connected networks that are applied to each position separately and identically within the layers of an encoder and decoder. This means that the network processes input data at each position independently without considering the relationships between different positions."
+    },
+    {
+        "Keyword": "Layer Type Complexity per Layer Sequential",
+        "Explanation": "The keyword 'Layer Type Complexity per Layer Sequential' refers to the computational complexity of different types of neural network layers when they are applied sequentially in a neural network model. The complexity is measured based on the number of operations required for each layer type and the maximum path length that the data must traverse through the network. In this context, the different layer types (Self-Attention, Recurrent, Convolutional, and restricted Self-Attention) have varying levels of complexity in terms of the number of operations and the path length. For example, Self-Attention has a complexity of O(n2\u00c2\u00b7d) for operations, while Recurrent has a complexity of O(n\u00c2\u00b7d2), and Convolutional has a complexity of O(k\u00c2\u00b7n\u00c2\u00b7d2). The restricted Self-Attention layer has a complexity of O(r\u00c2\u00b7n\u00c2\u00b7d)."
+    },
+    {
+        "Keyword": "Convolutional O(k\u00c2\u00b7n\u00c2\u00b7d2",
+        "Explanation": "The keyword 'Convolutional O(k\u00c2\u00b7n\u00c2\u00b7d2)' refers to the computational complexity of a convolutional layer in a neural network. This complexity is determined by the number of operations required, which is proportional to the product of the kernel size (k), the input size (n), and the square of the depth (d) of the input data. This means that as the kernel size, input size, or depth increases, the computational cost of the convolutional layer also increases."
+    },
+    {
+        "Keyword": "Positional Encoding",
+        "Explanation": "Positional encoding is a technique used in models that do not have recurrence or convolution mechanisms to capture the order of tokens in a sequence. It involves injecting information about the relative or absolute position of tokens in the sequence, allowing the model to understand the sequential relationships between them. This helps the model effectively process and interpret the input data in the correct order."
+    },
+    {
+        "Keyword": "Table 3 row",
+        "Explanation": "In the context of a scientific paper, \"Table 3 row\" refers to a specific row in Table 3 of the paper where experimental results or data related to the study are presented. In this case, the paper is discussing different experiments and findings related to attention heads, attention key and value dimensions, and attention key size. Each row in Table 3 likely corresponds to a different experimental setup or parameter variation that the researchers tested and analyzed."
+    },
+    {
+        "Keyword": "three desiderata",
+        "Explanation": "In this context, \"three desiderata\" refers to three specific criteria or objectives that are driving the use of self-attention in the scientific paper. These criteria are likely being used to justify why self-attention is being chosen as a method or approach in the research being conducted. The paper is likely discussing how self-attention meets these criteria and how it is beneficial for the study."
+    },
+    {
+        "Keyword": "Table 1",
+        "Explanation": "In this context, 'Table 1' refers to a specific table in the scientific paper that displays information about maximum path lengths, complexity, and sequential operations for different types of layers in a neural network model. The table compares the number of operations needed for self-attention and recurrent layers, showing that self-attention layers require a constant number of operations for all positions, while recurrent layers require a number of operations proportional to the input size (O(n))."
+    },
+    {
+        "Keyword": "kernel width",
+        "Explanation": "Kernel width refers to the size of the filter used in a convolutional layer of a neural network. In this context, the statement indicates that if the kernel width (k) is less than the input size (n), not all pairs of input and output positions are connected. This means that the filter is not able to capture information from all parts of the input data, potentially leading to loss of important features in the network's calculations."
+    },
+    {
+        "Keyword": "Training Data",
+        "Explanation": "Training data refers to the specific set of data that is used to teach a machine learning model how to perform a task. In this context, the researchers used different amounts of training data to train a Transformer model for English constituency parsing, a type of natural language processing task. They found that the model performed well even when trained with limited amounts of data, demonstrating its ability to generalize to other tasks."
+    },
+    {
+        "Keyword": "about 4.5 million",
+        "Explanation": "In this context, the phrase 'about 4.5 million' refers to an estimated quantity of a certain variable or population size mentioned in the scientific paper. This means that the actual number may vary slightly, but it is generally around 4.5 million."
+    },
+    {
+        "Keyword": "about 37000",
+        "Explanation": "In this context, 'about 37000' refers to the number of tokens in the shared vocabulary used for encoding sentences. Byte-pair encoding is a technique that breaks down words or phrases into smaller units called tokens, and in this case, the vocabulary consists of approximately 37,000 of these tokens. This shared vocabulary is used for encoding sentences in the study, enabling the representation of text data in a more efficient and effective manner."
+    },
+    {
+        "Keyword": "about 0.4 seconds",
+        "Explanation": "In this context, 'about 0.4 seconds' refers to the specific amount of time it takes for a particular event or process to occur. This measurement indicates a short duration, emphasizing the quick pace at which the event occurs."
+    },
+    {
+        "Keyword": "12 hours",
+        "Explanation": "In this context, the keyword '12 hours' refers to the amount of time it took to train the base models for the scientific study. The models were trained continuously for a total of 12 hours to reach a total of 100,000 steps. This indicates the duration of the training process and the amount of time and computational resources required to complete it."
+    },
+    {
+        "Keyword": "1.0 seconds",
+        "Explanation": "In the context of the scientific paper, '1.0 seconds' refers to a specific unit of time measurement. This means one second, which is a commonly used unit of time in scientific experiments and observations."
+    },
+    {
+        "Keyword": "3.5 days",
+        "Explanation": "In this context, '3.5 days' refers to a specific time frame being studied or measured in the scientific paper. This could indicate the duration of an experiment, the time it takes for a certain process to occur, or the interval between observations or measurements. It is a key parameter being analyzed or discussed in relation to the research being conducted."
+    },
+    {
+        "Keyword": "Deep-Att + PosUnk",
+        "Explanation": "The keyword \"Deep-Att + PosUnk\" refers to a specific deep learning model that incorporates attention mechanisms and deals with uncertain or unknown positions in the input data. This model has been used in the context of the scientific paper to achieve certain results or outcomes."
+    },
+    {
+        "Keyword": "39.2 1.0\u00c2\u00b71020",
+        "Explanation": "In the context of the scientific paper, '39.2 1.0\u00c2\u00b710^20' likely represents a specific numerical value or measurement. The number '39.2' is the coefficient or numerical value, and '1.0\u00c2\u00b710^20' represents the exponent or power of 10. When multiplied together, these two components indicate a very large number, likely in the order of 10^20 or 100 quintillion. This value is significant in the context of the scientific research being discussed in the paper."
+    },
+    {
+        "Keyword": "39.92 2.3\u00c2\u00b710191.4\u00c2\u00b71020",
+        "Explanation": "In the context of a scientific paper, the keyword '39.92 2.3\u00c2\u00b710^19 1.4\u00c2\u00b710^20' likely represents numerical values or measurements related to a particular scientific study or experiment. The first number, 39.92, is a specific value, while the following two numbers, 2.3\u00c2\u00b710^19 and 1.4\u00c2\u00b710^20, are written in scientific notation. This notation is commonly used in scientific research to express very large or very small numbers in a more concise and standardized format. The numbers in scientific notation indicate the value multiplied by a power of 10, with the exponent indicating the number of decimal places the decimal point should be moved."
+    },
+    {
+        "Keyword": "Deep-Att + PosUnk Ensemble",
+        "Explanation": "The keyword 'Deep-Att + PosUnk Ensemble' refers to a specific type of ensemble model used in deep learning for a particular task, likely related to natural language processing or text analysis. This model combines a deep attention mechanism (Deep-Att) with a component that handles unknown or ambiguous words or phrases (PosUnk). By combining these two components in an ensemble, the model aims to improve performance and accuracy in the task at hand."
+    },
+    {
+        "Keyword": "40.4 8.0\u00c2\u00b71020",
+        "Explanation": "In the context of the scientific paper, the keyword '40.4 8.0\u00c2\u00b710^20' likely represents a specific numerical value related to a measurement or calculation. The number before the space (40.4) is the coefficient or mantissa, while the number after the space (8.0) is the exponent. When combined, the value is expressed in scientific notation, indicating the number 40.4 multiplied by 10 raised to the power of 20 (8.0\u00c2\u00b710^20). This notation is commonly used in scientific research to represent very large or very small numbers in a more concise and manageable format."
+    },
+    {
+        "Keyword": "38.1 3.3\u00c2\u00b71018",
+        "Explanation": "In the context of the scientific paper, the keyword '38.1 3.3\u00c2\u00b710^18' likely refers to a specific numerical value or measurement. The number 38.1 represents a quantity or measurement, while the notation '3.3\u00c2\u00b710^18' indicates that this value should be multiplied by 10 raised to the power of 18. This notation is commonly used in scientific notation to represent very large or very small numbers. Therefore, '38.1 3.3\u00c2\u00b710^18' likely represents a numerical value that is quite large and is relevant to the topic being discussed in the scientific paper."
+    },
+    {
+        "Keyword": "41.8 2.3\u00c2\u00b71019",
+        "Explanation": "In the context of the scientific paper, '41.8 2.3\u00c2\u00b710^19' likely refers to a numerical value that represents a specific measurement or calculation. The number '41.8' could represent a quantity or value, while '2.3\u00c2\u00b710^19' indicates that this value should be multiplied by 10 raised to the power of 19. This notation is commonly used in scientific notation to express very large or very small numbers in a more manageable form."
+    },
+    {
+        "Keyword": "Label Smoothing",
+        "Explanation": "Label smoothing is a technique used during training in machine learning models to prevent them from becoming too confident in their predictions. It involves adjusting the target labels slightly by a small value (in this case \u00cf\u00b5ls= 0) to introduce a small amount of uncertainty. This helps prevent the model from overfitting to the training data and improves its generalization performance."
+    },
+    {
+        "Keyword": "Table 2",
+        "Explanation": "In this scientific paper, 'Table 2' refers to a table that presents the results of the Transformer model in terms of its performance in machine translation tasks. The table compares the BLEU scores (a metric used to evaluate the quality of translations) of the Transformer model with previous state-of-the-art models on English-to-German and English-to-French translation tests. It also highlights that the Transformer model achieved better results at a lower training cost compared to other models discussed in the literature."
+    },
+    {
+        "Keyword": "more than 2.0",
+        "Explanation": "In this context, the keyword 'more than 2.0' likely refers to a measurement or value that is greater than 2.0. This could be in reference to a specific threshold, limit, or level that is being discussed in the scientific paper. The exact significance of 'more than 2.0' would depend on the specific context and topic of the paper."
+    },
+    {
+        "Keyword": "Table 3",
+        "Explanation": "'Table 3' refers to a specific table in the scientific paper where information related to experimental results, model configurations, and other relevant details are presented. In this context, Table 3 is referenced to compare different versions of positional embeddings and to provide details about the configuration of a specific model used in the study."
+    },
+    {
+        "Keyword": "last 5",
+        "Explanation": "In this context, the keyword 'last 5' refers to the most recent 5 versions or snapshots of a model that were saved during the training process. These 5 versions were obtained by averaging the values of the model parameters from these checkpoints, which were saved at 10-minute intervals during the training process. This technique helps to improve the stability and performance of the model by considering a consensus of the recent updates."
+    },
+    {
+        "Keyword": "+ 50",
+        "Explanation": "In this context, the keyword '+ 50' is used to indicate that the maximum output length during the inference process is set to be 50 characters longer than the input length. This allows for flexibility in the output length while still ensuring that the process terminates early when possible."
+    },
+    {
+        "Keyword": "8Table 3",
+        "Explanation": "In this context, '8Table 3' refers to Table 3 in the scientific paper, which contains information and details about different variations of the Transformer architecture. The table likely presents comparisons or descriptions of how the Transformer architecture has been modified or adapted in various ways for different purposes or improvements. The reader can refer to this table to better understand the different versions of the Transformer architecture discussed in the paper."
+    },
+    {
+        "Keyword": "h d k dvPdrop",
+        "Explanation": "In this context, 'h d k dvPdrop' likely refers to a hyperparameter related to dropout in a deep learning model. Dropout is a technique used to prevent overfitting in neural networks by randomly dropping out (setting to zero) a proportion of the neurons during training. The specific value of 'h d k dvPdrop' would determine the probability of dropping out neurons in a certain layer of the model."
+    },
+    {
+        "Keyword": "PPL BLEU",
+        "Explanation": "In this context, 'PPL BLEU' likely refers to a metric used to evaluate the performance of a language model. PPL stands for Perplexity, which measures how well a language model predicts a given text. BLEU is a metric used to evaluate the quality of machine-translated text by comparing it to a set of reference translations. It is common to see both metrics used together to assess the effectiveness of language models in scientific research."
+    },
+    {
+        "Keyword": "6 512",
+        "Explanation": "In this context, '6 512' refers to the configuration of a neural network model. Specifically, it indicates that the model has 6 layers and each layer has 512 units (neurons). This configuration is important for determining the complexity and capacity of the model in processing and learning from data."
+    },
+    {
+        "Keyword": "4.91 25.8",
+        "Explanation": "In the context of this scientific paper, the keyword '4.91 25.8' likely refers to a specific numerical value or data point that is relevant to the research being discussed. The numbers '4.91' and '25.8' may represent measurements, calculations, or results obtained during the study that hold significance in understanding the topic. Further details and context from the paper would be needed to fully interpret the meaning of this keyword."
+    },
+    {
+        "Keyword": "5.01 25.4",
+        "Explanation": "In this context, the keyword '5.01 25.4' likely refers to specific measurements or values related to the topic being discussed in the scientific paper. '5.01' and '25.4' are numerical values that may represent dimensions, quantities, concentrations, or any other relevant data points. Researchers may use these values to support their findings, conclusions, or hypotheses."
+    },
+    {
+        "Keyword": "25.1 58",
+        "Explanation": "In the context of a scientific paper, the keyword '25.1 58' likely refers to a specific set of coordinates or measurements. These numbers may represent a particular location, temperature, or data point that is important for the study being discussed. It is important to refer back to the paper to fully understand the significance of these specific numbers in relation to the research being conducted."
+    },
+    {
+        "Keyword": "25.3 50",
+        "Explanation": "In the context of a scientific paper, the keyword '25.3 50' likely refers to a specific numerical value or range that is important to the research being discussed. It could represent a measurement, parameter, or data point that is significant in the study. The numbers 25.3 and 50 may have specific units or represent a relationship between two variables. Further context from the paper would be needed to fully understand the significance of this keyword."
+    },
+    {
+        "Keyword": "24.5 28",
+        "Explanation": "In the context of a scientific paper, the keyword '24.5 28' likely refers to a specific range or measurement of values. It could represent a temperature range, a set of coordinates, or some other numerical data relevant to the study being discussed. Further information from the paper would be needed to fully understand the significance of this keyword."
+    },
+    {
+        "Keyword": "26.0 168",
+        "Explanation": "In the context of a scientific paper, '26.0 168' likely refers to specific numerical values or measurements relevant to the study being conducted. These numbers may represent data points, experimental results, or parameters used in calculations. It is important to refer to the specific section of the paper where these numbers are mentioned to fully understand their significance in the research."
+    },
+    {
+        "Keyword": "26.2 90",
+        "Explanation": "In this context, '26.2 90' likely refers to a specific set of experimental conditions or parameters used in the study. The numbers '26.2' and '90' likely represent values or measurements that are important for understanding the results of the study. The specific meaning of '26.2 90' would need to be further explained in the context of the scientific paper."
+    },
+    {
+        "Keyword": "4.67 25.3",
+        "Explanation": "In the context of the scientific paper, '4.67 25.3' likely refers to specific numerical values or measurements that are important for the research being discussed. These numbers may represent data points, experimental results, or calculations that are significant in the study. They could relate to variables, parameters, or outcomes that are being analyzed or compared within the research."
+    },
+    {
+        "Keyword": "5.47 25.7",
+        "Explanation": "In the context of the scientific paper, '5.47 25.7' likely refers to two specific numerical values or measurements that are important for the study or research being discussed. These values could represent data points, experimental results, or parameters that are being analyzed or compared within the paper. The inclusion of these numbers suggests that they play a significant role in the findings or conclusions of the study."
+    },
+    {
+        "Keyword": "4.92 25.7",
+        "Explanation": "In the context of a scientific paper, the keyword '4.92 25.7' likely refers to specific numerical values or measurements that are relevant to the study being discussed. These values could represent data points, experimental results, or parameters that are important for understanding the research findings. The numbers '4.92' and '25.7' may have specific units or significance within the study, and further details about their interpretation would be provided in the paper."
+    },
+    {
+        "Keyword": "6 1024",
+        "Explanation": "In this context, the keyword '6 1024' likely refers to a specific parameter or setting within the scientific study being described. It is associated with a larger value of '4096' and smaller values of '16' and '0'. The exact meaning of '6 1024' would depend on the specific scientific field and the context of the paper."
+    },
+    {
+        "Keyword": "0.3 300",
+        "Explanation": "In the context of a scientific paper, '0.3 300' likely refers to a specific parameter or measurement. The number '0.3' could represent a value or ratio, while '300' could indicate a unit of measurement or a specific quantity. Further information from the paper would be needed to determine the exact meaning of this keyword."
+    },
+    {
+        "Keyword": "Table 3",
+        "Explanation": "'Table 3' in this scientific paper refers to a specific table containing important information and results about the experiments conducted. The text mentions that the results from using learned positional embeddings were nearly identical to another version, as shown in row (E) of Table 3. Additionally, details about the configuration of the big models used in the study are provided in the bottom line of Table 3."
+    },
+    {
+        "Keyword": "the Wall Street Journal",
+        "Explanation": "In this context, 'the Wall Street Journal' refers to a specific dataset used for training a machine learning model. The dataset consists of sentences taken from the Wall Street Journal and is a part of the Penn Treebank collection. The model was trained on approximately 40,000 sentences from this dataset to improve its performance."
+    },
+    {
+        "Keyword": "Penn Treebank",
+        "Explanation": "The Penn Treebank is a dataset that consists of annotated sentences from the Wall Street Journal. In this context, the researchers trained a deep learning model called a transformer on this dataset, which contained around 40,000 training sentences."
+    },
+    {
+        "Keyword": "about 40",
+        "Explanation": "In this context, \"about 40\" refers to approximately 40,000 training sentences used to train a 4-layer transformer model with a model size of 1024 on the Wall Street Journal portion of the Penn Treebank dataset."
+    },
+    {
+        "Keyword": "approximately 17",
+        "Explanation": "In this context, 'approximately 17' refers to the number of sentences in the high-confidence and BerkleyParser corpora that were used to train the model in a semi-supervised setting. The exact number may be slightly more or less than 17 million sentences."
+    },
+    {
+        "Keyword": "Section 22",
+        "Explanation": "In this context, 'Section 22' refers to a specific portion or subset of data that is being used for evaluating the performance of a translation model. The development set in Section 22 is being used to analyze the impact of different factors, such as learning rates and beam size, on the model's performance. This section is a standardized part of the evaluation process for the translation model."
+    },
+    {
+        "Keyword": "9Table 4",
+        "Explanation": "9Table 4 is a section in the scientific paper that contains results related to the Transformer model's performance in English constituency parsing. The results specifically pertain to Section 23 of the Wall Street Journal dataset. The table shows the F1 scores achieved by the Transformer model compared to other parsers, such as the one developed by Vinyals & Kaiser et al."
+    },
+    {
+        "Keyword": "Section 23",
+        "Explanation": "Section 23 refers to a specific section of the Wall Street Journal (WSJ) dataset that is being used to evaluate the performance of the Transformer model in English constituency parsing. In this context, the results of the model's performance on this particular section of the dataset are being presented in Table 4 of the scientific paper."
+    },
+    {
+        "Keyword": "Parser Training",
+        "Explanation": "In this context, \"Parser Training\" refers to the process of training a parser, which is a type of natural language processing model, to accurately analyze and understand the syntactic structure of sentences in a given language. In this case, the parser was specifically trained to generalize well to English constituency parsing, as demonstrated by the results presented in Section 23 of the Wall Street Journal."
+    },
+    {
+        "Keyword": "F1",
+        "Explanation": "The keyword \"F1 Vinyals & Kaiser el al\" likely refers to the F1 score achieved by a model developed by Vinyals and Kaiser et al. in the context of English constituency parsing. F1 score is a measure of a model's accuracy that takes into account both precision and recall. In this case, the model developed by Vinyals and Kaiser et al. performed well on English constituency parsing tasks in Section 23 of the Wall Street Journal dataset."
+    },
+    {
+        "Keyword": "Petrov et al.",
+        "Explanation": "In scientific papers, \"Petrov et al.\" refers to a group of authors, led by Petrov, who have conducted research and published a paper on a specific topic. The term \"et al.\" is Latin for \"and others,\" indicating that there are additional authors besides Petrov. This citation format is commonly used in academic writing to credit multiple authors in a paper without listing all of their names."
+    },
+    {
+        "Keyword": "Zhu et al",
+        "Explanation": "\"Zhu et al\" refers to a group of authors led by someone named Zhu who have conducted research on the topic being discussed in the scientific paper. The number following the name indicates the specific reference or study published by this group."
+    },
+    {
+        "Keyword": "Dyer et al",
+        "Explanation": "\"Dyer et al\" refers to a group of authors, led by Dyer, who have contributed to the scientific paper being referenced. The term is commonly used in academic writing to credit multiple authors, rather than listing each individual separately."
+    },
+    {
+        "Keyword": "Zhu et al",
+        "Explanation": "In this context, \"Zhu et al\" refers to a group of authors who have conducted a scientific study or research. The term \"et al\" is used to indicate that there are multiple authors involved in the work, with Zhu being the first author listed."
+    },
+    {
+        "Keyword": "91.3",
+        "Explanation": "The keyword '91.3 Huang & Harper' likely refers to a specific reference or citation within the scientific paper. This could be a study conducted by researchers Huang and Harper, with the number \"91.3\" possibly indicating the specific page or section of their work that is being referenced in the paper. This keyword is used to give credit to the original authors and provide further information or context for the topic being discussed."
+    },
+    {
+        "Keyword": "Vinyals & Kaiser el al",
+        "Explanation": "Vinyals & Kaiser et al refers to a research paper or study conducted by Vinyals and Kaiser, along with their collaborators. In this context, the authors have developed a parser that has been trained on the Wall Street Journal Section 23 dataset and achieved an F1 score of 1. This indicates that their parser performs very well in English constituency parsing tasks."
+    },
+    {
+        "Keyword": "Dyer et al",
+        "Explanation": "The keyword \"Dyer et al\" refers to a group of authors who have collaborated on a scientific paper or study. The term \"et al\" is commonly used in academic writing to indicate multiple authors, with \"Dyer\" being the lead author in this case."
+    },
+    {
+        "Keyword": "+ 300",
+        "Explanation": "In this context, the keyword '+ 300' indicates that the maximum output length is increased by adding 300 to the input length. This means that the maximum length of the output generated will be 300 characters longer than the length of the input provided."
+    },
+    {
+        "Keyword": "Table 4",
+        "Explanation": "In this scientific paper, 'Table 4' refers to a specific table within the document that presents results related to the generalization of the Transformer model to English constituency parsing. The table displays the performance of the model on Section 23 of the Wall Street Journal (WSJ) dataset, specifically in terms of the F1 score. The results in Table 4 demonstrate that the Transformer model performs well without needing task-specific tuning, outperforming all previous models except for the Recurrent Neural Network Grammar."
+    },
+    {
+        "Keyword": "Recurrent Neural Network Grammar",
+        "Explanation": "A Recurrent Neural Network Grammar is a specific type of neural network model that excels in certain tasks, as indicated by the results in Table 4 of the scientific paper. This type of neural network performs better than other models when applied to the task described in the paper, even without being specifically adjusted or fine-tuned for that particular task."
+    },
+    {
+        "Keyword": "Nal Kalchbrenner",
+        "Explanation": "Nal Kalchbrenner is a person who provided helpful comments, corrections, and inspiration for the scientific paper being referenced."
+    },
+    {
+        "Keyword": "Stephan Gouws",
+        "Explanation": "Stephan Gouws is someone who provided helpful feedback, corrections, and inspiration for the scientific paper being referenced."
+    },
+    {
+        "Keyword": "Lei Ba",
+        "Explanation": "'Lei Ba' is likely the name of one of the authors of the scientific paper referenced. It may refer to a researcher or scientist who contributed to the study or research being discussed in the paper."
+    },
+    {
+        "Keyword": "Jamie Ryan Kiros",
+        "Explanation": "Jamie Ryan Kiros is a researcher who has contributed to the scientific paper mentioned in the reference."
+    },
+    {
+        "Keyword": "Geoffrey E Hinton",
+        "Explanation": "Geoffrey E Hinton is a scientist who has been referenced in a scientific paper along with Jimmy Lei Ba and Jamie Ryan Kiros. He is well-known for his contributions to the field of artificial intelligence, particularly in the area of deep learning and neural networks."
+    },
+    {
+        "Keyword": "Kyunghyun Cho",
+        "Explanation": "Kyunghyun Cho is a scientist who has collaborated with Dzmitry Bahdanau and Yoshua Bengio on a scientific paper. He likely contributed to the research or analysis discussed in the paper."
+    },
+    {
+        "Keyword": "Yoshua Bengio",
+        "Explanation": "Yoshua Bengio is a prominent figure in the field of machine learning and artificial intelligence. He is known for his contributions to deep learning and neural networks, particularly in the area of natural language processing. He has worked on various research projects with other leading researchers in the field, including Dzmitry Bahdanau and Kyunghyun Cho."
+    },
+    {
+        "Keyword": "Anna Goldie",
+        "Explanation": "In this context, 'Anna Goldie' is likely the name of one of the authors of the scientific paper mentioned along with Denny Britz, Minh-Thang Luongiting of the paper in the field of study indicated."
+    },
+    {
+        "Keyword": "Quoc V .",
+        "Explanation": "The keyword 'Quoc V.' likely refers to an individual named Quoc V. who is mentioned in the scientific paper. This could be a researcher, author, or contributor who has provided input or information relevant to the study."
+    },
+    {
+        "Keyword": "Li Dong",
+        "Explanation": "In this context, 'Li Dong' is most likely referring to a specific individual who is one of the authors of the scientific paper mentioned. It is a common practice in academic writing to include the names of the authors of a paper to give credit to their contributions to the research."
+    },
+    {
+        "Keyword": "Quoc V .",
+        "Explanation": "The keyword 'Quoc V.' likely refers to an individual named Quoc V. who is mentioned in the scientific paper. This could be a researcher, author, or contributor who has provided input or information relevant to the study."
+    },
+    {
+        "Keyword": "Li Dong",
+        "Explanation": "In this context, 'Li Dong' is most likely referring to a specific individual who is one of the authors of the scientific paper mentioned. It is a common practice in academic writing to include the names of the authors of a paper to give credit to their contributions to the research."
+    },
+    {
+        "Keyword": "Mirella Lapata",
+        "Explanation": "Mirella Lapata is a researcher who collaborated with Jianpeng Cheng and Li Dong on a scientific paper. She likely contributed expertise and knowledge related to the topic of the paper."
+    }
+]

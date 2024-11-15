@@ -1,6 +1,6 @@
 import openai
 import os
-from db_handler import DatabaseHandler
+from src.flashcards.db_handler import DatabaseHandler
 import json
 
 # Load config.json

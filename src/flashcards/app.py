@@ -3,10 +3,10 @@ import time
 import streamlit as st
 import random
 #from db_handler import *
-from flashcard import *
+from src.flashcards.flashcard import *
 import plotly.express as px
 import pandas as pd
-from fill_cards import *
+from src.flashcards.fill_cards import *
 import requests
 
 # Initialize database

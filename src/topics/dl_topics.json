@@ -1,0 +1,219 @@
+[
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Fundamentals",
+        "sub_category_2": "Basics",
+        "sub_category_3": "What is Deep Learning",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Fundamentals",
+        "sub_category_2": "Mathematics",
+        "sub_category_3": "Linear Algebra",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Fundamentals",
+        "sub_category_2": "Mathematics",
+        "sub_category_3": "Probability and Statistics",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Fundamentals",
+        "sub_category_2": "Mathematics",
+        "sub_category_3": "Calculus for Optimization",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Neural Network Architectures",
+        "sub_category_2": "Basics",
+        "sub_category_3": "Feedforward Neural Networks",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Neural Network Architectures",
+        "sub_category_2": "CNNs",
+        "sub_category_3": "Convolutional Layers",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Neural Network Architectures",
+        "sub_category_2": "CNNs",
+        "sub_category_3": "Pooling Layers",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Neural Network Architectures",
+        "sub_category_2": "RNNs",
+        "sub_category_3": "Long Short-Term Memory (LSTM)",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Neural Network Architectures",
+        "sub_category_2": "RNNs",
+        "sub_category_3": "Gated Recurrent Units (GRU)",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Training Deep Neural Networks",
+        "sub_category_2": "Optimization",
+        "sub_category_3": "Gradient Descent",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Training Deep Neural Networks",
+        "sub_category_2": "Regularization",
+        "sub_category_3": "Dropout",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Training Deep Neural Networks",
+        "sub_category_2": "Hyperparameter Tuning",
+        "sub_category_3": "Grid Search",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Model Evaluation and Deployment",
+        "sub_category_2": "Evaluation Metrics",
+        "sub_category_3": "Accuracy, Precision, Recall",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Model Evaluation and Deployment",
+        "sub_category_2": "Overfitting and Underfitting",
+        "sub_category_3": "Detection and Mitigation",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Model Evaluation and Deployment",
+        "sub_category_2": "Deployment Techniques",
+        "sub_category_3": "Cloud Deployment",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Model Evaluation and Deployment",
+        "sub_category_2": "Deployment Techniques",
+        "sub_category_3": "Edge Deployment",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Specialized Architectures",
+        "sub_category_2": "Autoencoders",
+        "sub_category_3": "Variational Autoencoders (VAE)",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Specialized Architectures",
+        "sub_category_2": "GANs",
+        "sub_category_3": "Generative Adversarial Networks",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Specialized Architectures",
+        "sub_category_2": "GNNs",
+        "sub_category_3": "Graph Neural Networks",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Specialized Architectures",
+        "sub_category_2": "Reinforcement Learning",
+        "sub_category_3": "Deep Q-Learning",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Advanced Topics",
+        "sub_category_2": "Explainable AI",
+        "sub_category_3": "SHAP and LIME",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Advanced Topics",
+        "sub_category_2": "Transfer Learning",
+        "sub_category_3": "Pretrained Models and Fine-tuning",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Advanced Topics",
+        "sub_category_2": "Federated Learning",
+        "sub_category_3": "Privacy-preserving Training",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Advanced Topics",
+        "sub_category_2": "Meta-learning",
+        "sub_category_3": "Few-shot Learning",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Tools and Frameworks",
+        "sub_category_2": "Frameworks",
+        "sub_category_3": "TensorFlow",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Tools and Frameworks",
+        "sub_category_2": "Frameworks",
+        "sub_category_3": "PyTorch",
+        "difficulty": "basic"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Tools and Frameworks",
+        "sub_category_2": "Libraries",
+        "sub_category_3": "Hugging Face Transformers",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Tools and Frameworks",
+        "sub_category_2": "Workflow Automation",
+        "sub_category_3": "MLFlow",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Ethical and Societal Implications",
+        "sub_category_2": "Bias in AI",
+        "sub_category_3": "Sources and Mitigation",
+        "difficulty": "intermediate"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Ethical and Societal Implications",
+        "sub_category_2": "Adversarial Attacks",
+        "sub_category_3": "Fooling Neural Networks",
+        "difficulty": "advanced"
+    },
+    {
+        "category": "Deep Learning",
+        "sub_category_1": "Ethical and Societal Implications",
+        "sub_category_2": "Sustainability in AI",
+        "sub_category_3": "Energy-efficient Models",
+        "difficulty": "advanced"
+    }
+]
